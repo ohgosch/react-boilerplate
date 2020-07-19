@@ -1,6 +1,4 @@
-export const COLORS = {
-
-};
+export const COLORS = {};
 
 export const RESOLUTIONS = {
   mobile: {

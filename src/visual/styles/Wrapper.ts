@@ -22,3 +22,5 @@ export const Wrapper = styled.div`
     max-width: ${RESOLUTIONS.desktop.min};
   `)}
 `;
+
+export default Wrapper;

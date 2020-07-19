@@ -1,4 +1,4 @@
-import { pxToRem } from "./pxToRem";
+import { pxToRem } from './pxToRem';
 
 describe('[Logic] pxToRem', () => {
   it('Should returns 0.625rem', () => {
