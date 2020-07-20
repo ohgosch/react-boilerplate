@@ -2,43 +2,53 @@ import { css, FlattenSimpleInterpolation } from 'styled-components';
 
 import { RESOLUTIONS } from 'visual/constants';
 
-export function mobile(content: FlattenSimpleInterpolation) {
+export const mobile = (
+  content: FlattenSimpleInterpolation,
+): FlattenSimpleInterpolation => {
   return css`
     @media (max-width: ${RESOLUTIONS.mobile.max}) {
       ${content}
     }
   `;
-}
+};
 
-export function mobileTablet(content: FlattenSimpleInterpolation) {
+export const mobileTablet = (
+  content: FlattenSimpleInterpolation,
+): FlattenSimpleInterpolation => {
   return css`
     @media (max-width: ${RESOLUTIONS.tablet.max}) {
       ${content}
     }
   `;
-}
+};
 
-export function tablet(content: FlattenSimpleInterpolation) {
+export const tablet = (
+  content: FlattenSimpleInterpolation,
+): FlattenSimpleInterpolation => {
   return css`
     @media (min-width: ${RESOLUTIONS.tablet.min}) and (max-width: ${RESOLUTIONS
         .tablet.max}) {
       ${content}
     }
   `;
-}
+};
 
-export function tabletDesktop(content: FlattenSimpleInterpolation) {
+export const tabletDesktop = (
+  content: FlattenSimpleInterpolation,
+): FlattenSimpleInterpolation => {
   return css`
     @media (min-width: ${RESOLUTIONS.tablet.min}) {
       ${content}
     }
   `;
-}
+};
 
-export function desktop(content: FlattenSimpleInterpolation) {
+export const desktop = (
+  content: FlattenSimpleInterpolation,
+): FlattenSimpleInterpolation => {
   return css`
     @media (min-width: ${RESOLUTIONS.desktop.min}) {
       ${content}
     }
   `;
-}
+};

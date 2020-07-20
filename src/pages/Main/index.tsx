@@ -2,8 +2,8 @@ import React from 'react';
 
 import { Container } from './styles';
 
-function Main() {
+const Main: React.SFC = () => {
   return <Container />;
-}
+};
 
 export default Main;
