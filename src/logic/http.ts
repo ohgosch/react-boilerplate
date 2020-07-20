@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-export const API = () =>
+export const http = () =>
   axios.create({
     baseURL: process.env.REACT_APP_BASE_API,
   });
 
-export default API;
+export default http;
