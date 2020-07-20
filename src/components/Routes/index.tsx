@@ -5,17 +5,15 @@ import { ROUTES } from 'logic/constants';
 
 const Main = lazy(() => import('pages/Main'));
 
-function Routes() {
-  return (
-    <Suspense fallback={<></>}>
-      <Switch>
-        <Route>
-          <Main path={ROUTES.MAIN} />
-        </Route>
-      </Switch>
-    </Suspense>
-  );
-}
+const Routes: React.SFC = () => (
+  <Suspense fallback={<></>}>
+    <Switch>
+      <Route path={ROUTES.MAIN}>
+        <Main />
+      </Route>
+    </Switch>
+  </Suspense>
+);
 
 Routes.propTypes = {};
 
