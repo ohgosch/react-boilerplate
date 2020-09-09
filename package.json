@@ -1,7 +1,18 @@
 {
   "name": "react-boilerplate",
   "version": "0.1.0",
+  "author": "Gosch <dev@gosch.io> (https://gosch.io)",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:coverage": "yarn test -- --coverage --watchAll",
+    "test:all": "CI=true yarn test -- --silent && lint-staged",
+    "generate": "plop --plopfile ./generators/plopfile.js",
+    "eject": "react-scripts eject",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -24,16 +35,6 @@
     "react-scripts": "^3.4.3",
     "styled-components": "^5.2.0",
     "typescript": "~4.0.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "test:coverage": "yarn test -- --coverage --watchAll",
-    "test:all": "CI=true yarn test -- --silent && lint-staged",
-    "generate": "plop --plopfile ./generators/plopfile.js",
-    "eject": "react-scripts eject",
-    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -76,5 +77,12 @@
     "lint-staged": "^10.3.0",
     "plop": "^2.7.4",
     "prettier": "^2.1.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goschdev/react-boilerplate.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goschdev/react-boilerplate/issues"
   }
 }
